@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
+import { PracticaPage } from '../app/pages/PracticaPage';
 
 import logo from '../assets/react.svg';
 
@@ -11,7 +12,7 @@ export const Navigation = () => {
                 <img src={logo} className="logo" alt="React Logo" />
                 <ul>
                     <li>
-                        <NavLink to="/home" className={ ({ isActive }) => isActive ? 'nav-active': '' } >Home</NavLink>
+                        <NavLink to="/practica" className={ ({ isActive }) => isActive ? 'nav-active': '' } >Practica</NavLink>
                     </li>
                 </ul>
                 <ul>
@@ -30,9 +31,9 @@ export const Navigation = () => {
             <Routes>
                 <Route path='about' element={ <h1>About Page</h1> } />
                 <Route path='users' element={ <h1>Users Page</h1> } />
-                <Route path='home' element={ <h1>Home Page</h1> } />
+                <Route path='practica' element={ <PracticaPage /> } />
 
-                <Route path='/*' element={ <Navigate to="/home" replace /> } />
+                <Route path='/*' element={ <Navigate to="/practica" replace /> } />
 
             </Routes>
            
